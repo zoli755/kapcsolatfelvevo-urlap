@@ -1,0 +1,182 @@
+/* Betűtípus */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Kötelező mező csillag */
+label.required:after {
+    content: " *";
+    color: red;
+    font-weight: 400;
+}
+
+/* Alap stílusok */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.form-container {
+    width: 500px;
+    background: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.required-message {
+    text-align: center;
+    font-size: 12px;
+}
+
+.required-message::before {
+    content: "*";
+    color: red;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.form-container h1 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-container .required {
+    font-size: 12px;
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container label {
+    font-size: 13px !important;
+    font-weight: 400;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select, textarea, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button:disabled {
+    background: #ccc;
+}
+
+.inline-checkbox {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 14px;
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.success-message {
+    color: black;  /* Fekete szín */
+    font-weight: bold;  /* Vastag betűk */
+    font-size: 18px;  /* Betűméret */
+    text-align: center;  /* Középre igazítás */
+    display: none;  /* Kezdetben elrejtjük */
+    margin-top: 20px;  /* Térköz a többi elemhez */
+}
+
+
+#subtopic-section,
+#ticket-section,
+#order-number-section {
+    display: none;
+}
+
+input[type="file"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#file-list li {
+    margin: 5px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#file-list button {
+    background: none;
+    border: none;
+    color: #91261e; /* Alapértelmezett szín */
+    font-size: 16px; /* Ikon mérete */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 10px; /* Távolság a fájlnévtől */
+    transition: color 0.3s ease;
+}
+
+#file-list button:hover {
+    color: #d32f2f; /* Hover állapot */
+}
+
+
+
+button:disabled {
+    pointer-events: none; /* Nem kattintható */
+    opacity: 0.6; /* Halványított megjelenés */
+    cursor: not-allowed; /* Tiltott kurzor */
+}
+
+
+/* Checkbox stílusok */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin: 0;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    font-weight: 400;
+}
